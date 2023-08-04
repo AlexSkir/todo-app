@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/fonts/roboto-black-webfont.woff2') format('woff2');
+  src: url('../assets/fonts/roboto-black-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.logo {
+  height: 32px;
+  line-height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+  color: white;
+  text-align: center;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-footer {
+  text-align: center;
+}
+
+.lazy-loading {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.h3-demo {
+  font-family: 'MyFont';
+}
+
+.counter {
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter_result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.action_button {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+}

@@ -1,0 +1,77 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "off"
+    ],
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
+    "react/no-array-index-key": [
+      "off"
+    ],
+    "react/forbid-prop-types": [
+      "off"
+    ],
+    "no-console": "off",
+    "camelcase": "off",
+    "func-names": "off",
+    "no-shadow": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-unused-vars": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "\\.*?\\.svg\\?url$"
+        ]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state",
+          "todo"
+        ]
+      }
+    ]
+  }
+}

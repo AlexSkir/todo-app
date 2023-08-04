@@ -1,0 +1,70 @@
+@import './landing/landing-howItWorks';
+@import './landing/landing';
+@import './landing/media';
+
+:root {
+  --animation-ease-base: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animation-duration-150: 150ms;
+  --animation-duration-350: 350ms;
+  --animation-duration-600: 600ms;
+  --border-radius-full: 9999px;
+  --border-radius-2xl: 15px;
+  --border-radius-xl: 13px;
+  --border-radius-lg: 10px;
+  --border-radius-base: 8px;
+  --border-radius-sm: 6px;
+  --border-radius-none: 0;
+  --coef: 0.93;
+  --major-4xl-min-size: 2.75;
+  --major-4xl-max-size: 5.375;
+  --major-3xl-min-size: 2.625;
+  --major-3xl-max-size: 4.1875;
+  --major-2xl-min-size: 2.3125;
+  --major-2xl-max-size: 3.4375;
+  --max-font-size: 4.1875;
+  --min-font-size: 2.625;
+  --space-8: 0.5rem;
+  --space-16: 1rem;
+  --shadow-selectable-control: 0px 1px 5px 0px rgba(42, 29, 48, .11), 0px 0px 0px 1px rgba(42, 29, 48, .04);
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
+  --space-160: 10rem;
+  --space-192: 12rem;
+  --space-240: 15rem;
+  --space-304: 19rem;
+  --typography-max-screen: 70;
+  --typography-min-screen: 30;
+}
+
+.button {}
+
+.inlineSizeContainer {
+  inline-size: 100%;
+  max-inline-size: var(--max-inline-size);
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  --inline-size: var(--base-max-width, 100%);
+  --max-inline-size: var(--inline-size-padded);
+  --inline-padding: var(--space-24);
+  --inline-size-padded: calc(var(--inline-size) + var(--inline-padding)*2);
+}
+
+.typographyFontBase {
+  --slope: (var(--max-font-size) - var(--min-font-size)) /(var(--typography-max-screen) - var(--typography-min-screen));
+  --intersection: ((-1 * var(--typography-min-screen)) * var(--slope) + var(--min-font-size));
+  --font-size: clamp(var(--min-font-size) * 1rem, var(--intersection) * 1rem + var(--slope) * 100vw, var(--max-font-size) * 1rem);
+  font-size: var(--font-size);
+
+}
+
+@debug "typography";
